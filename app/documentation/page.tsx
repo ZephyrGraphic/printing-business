@@ -26,38 +26,38 @@ export default function DocumentationPage() {
         </div>
       </FadeIn>
 
-      <div className="grid md:grid-cols-[250px_1fr] gap-8">
+      <div className="grid md:grid-cols-[200px_1fr] lg:grid-cols-[250px_1fr] gap-4 md:gap-8">
         {/* Sidebar Navigation */}
         <div className="space-y-4">
           <Card>
             <CardContent className="p-4">
               <nav className="space-y-2">
                 <button
-                  className={`block p-2 rounded-md w-full text-left ${activeTab === "overview" ? "bg-muted" : "hover:bg-muted/50"}`}
+                  className={`block p-2 rounded-md w-full text-left text-sm ${activeTab === "overview" ? "bg-muted" : "hover:bg-muted/50"}`}
                   onClick={() => setActiveTab("overview")}
                 >
                   {language === "id" ? "Gambaran Umum" : "Overview"}
                 </button>
                 <button
-                  className={`block p-2 rounded-md w-full text-left ${activeTab === "customer-guide" ? "bg-muted" : "hover:bg-muted/50"}`}
+                  className={`block p-2 rounded-md w-full text-left text-sm ${activeTab === "customer-guide" ? "bg-muted" : "hover:bg-muted/50"}`}
                   onClick={() => setActiveTab("customer-guide")}
                 >
                   {language === "id" ? "Panduan Pelanggan" : "Customer Guide"}
                 </button>
                 <button
-                  className={`block p-2 rounded-md w-full text-left ${activeTab === "features" ? "bg-muted" : "hover:bg-muted/50"}`}
+                  className={`block p-2 rounded-md w-full text-left text-sm ${activeTab === "features" ? "bg-muted" : "hover:bg-muted/50"}`}
                   onClick={() => setActiveTab("features")}
                 >
                   {language === "id" ? "Fitur Website" : "Website Features"}
                 </button>
                 <button
-                  className={`block p-2 rounded-md w-full text-left ${activeTab === "multilingual" ? "bg-muted" : "hover:bg-muted/50"}`}
+                  className={`block p-2 rounded-md w-full text-left text-sm ${activeTab === "multilingual" ? "bg-muted" : "hover:bg-muted/50"}`}
                   onClick={() => setActiveTab("multilingual")}
                 >
                   {language === "id" ? "Dukungan Multibahasa" : "Multilingual Support"}
                 </button>
                 <button
-                  className={`block p-2 rounded-md w-full text-left ${activeTab === "faq" ? "bg-muted" : "hover:bg-muted/50"}`}
+                  className={`block p-2 rounded-md w-full text-left text-sm ${activeTab === "faq" ? "bg-muted" : "hover:bg-muted/50"}`}
                   onClick={() => setActiveTab("faq")}
                 >
                   {language === "id" ? "FAQ" : "FAQ"}
@@ -88,7 +88,7 @@ export default function DocumentationPage() {
         {/* Main Content */}
         <div className="space-y-8">
           <Tabs value={activeTab} onValueChange={setActiveTab}>
-            <TabsList className="grid grid-cols-5 mb-8">
+            <TabsList className="w-full flex flex-wrap md:flex-nowrap mb-8">
               <TabsTrigger value="overview" onClick={() => setActiveTab("overview")}>
                 {language === "id" ? "Gambaran Umum" : "Overview"}
               </TabsTrigger>
